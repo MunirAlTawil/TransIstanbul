@@ -1,0 +1,131 @@
+﻿@model BusAPP.Models.ElectronicCard
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-body">
+            <!-- Basic Horizontal form layout section start -->
+            <section id="basic-horizontal-layouts">
+                <div class="row match-height">
+                    <div class="col-md-12 col-12">
+                        <div class="card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                            <div class="card-header">
+                                <h4 class="card-title"><span style="font-weight:bolder; color:yellow">Electronic Card</span></h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form class="form form-horizontal" method="post" role="form">
+                                        <div class="form-body">
+                                            <div class="row">
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Vehicles Type</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select class="form-control" asp-for="Vehicles" asp-items="Html.GetEnumSelectList<BusAPP.Enums.Vehicles>()" style=" background-color: rgba(255,255,255, 0.5) !important;">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Transport Number</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select class="form-control" asp-for="TransportNumber" placeholder="Enter price of card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                                <option value="Transport Number">Transport Number</option>
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Number Of Stops</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select class="form-control" asp-for="NumberOfStops" placeholder="Enter Loaded Money to the Card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                                <option value="Number Of Stops">Number Of Stops</option>
+                                                                <option value="3">3</option>
+                                                                <option value="9">9</option>
+                                                                <option value="15">15</option>
+                                                                <option value="21">21</option>
+                                                                <option value="27">27</option>
+                                                                <option value="33">33</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Electronic Card Id</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Enter Card Id" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Points</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="number" asp-for="Points" class="form-control" placeholder="Enter Loaded Money to the Card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Deducted Amount</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="DeductedAmount" class="form-control" placeholder="@ViewBag.alaa" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Available Balance</span>
+
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="number" asp-for="AvailableBalance" class="form-control" placeholder="@ViewBag.ledia" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-8 offset-md-4">
+                                                    <a class="btn btn-primary mr-1 mb-1" asp-controller="Customer" asp-action="Index">Back </a>
+
+                                                    <button type="submit" class="btn btn-primary mr-1 mb-1">Calculate</button>
+                                                    @*<button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>*@
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

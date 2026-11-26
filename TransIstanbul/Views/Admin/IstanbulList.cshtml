@@ -1,0 +1,50 @@
+﻿@model List<TransIstanbul.AddClasses.IstanbulCard>
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="col-12">
+            <div class="card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                <div class="card-header">
+                    <h4 class="card-title"><span style="font-weight: bold;color: #cf3e3c">Table of Istanbul Cards</span></h4>
+                </div>
+                <div class="card-content">
+
+
+                    <!-- Table with no outer spacing -->
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr style="font-weight: bolder">
+                                    <th style="font-size:large">Customer Type</th>
+                                    <th style="font-size:large">Customer Name</th>
+                                    <th style="font-size:large">Customer ID</th>
+                                    <th style="font-size:large">Card ID</th>
+                                    <th style="font-size:large">Balance</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                @foreach (var ist in Model)
+                                {
+                    <tr style="font-weight: bold;color:#001a1a">
+                        <td>@ist.CustomerType</td>
+                        <td>@ist.CustomerName</td>
+                        <td>@ist.CustomerId</td>
+                        <td>@ist.CardId</td>
+                        <td>@ist.Balance</td>
+                    </tr>}
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <a class=" btn btn-primary" asp-controller="Admin" asp-action="Index">Back to Home Page</a>
+    </div>
+</div>

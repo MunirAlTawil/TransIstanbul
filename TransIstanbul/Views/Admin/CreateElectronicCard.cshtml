@@ -1,0 +1,72 @@
+﻿@model TransIstanbul.AddClasses.ElectronicCard
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+ 
+        <div class="content-body">
+            <!-- Basic Horizontal form layout section start -->
+            <section id="basic-horizontal-layouts">
+                <div class="row match-height">
+                    <div class="col-md-12 col-12">
+                        <div class="card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                            <div class="card-header">
+                                <h4 class="card-title"><span style="font-weight:bolder; color:yellow">Elcetronic Card</span></h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form class="form form-horizontal" method="post" role="form" asp-controller="Admin" asp-action="CreateElectronicCard">
+                                        <div class="form-body">
+                                            <div class="row">
+
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Card Id</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" asp-for="CardId" class="form-control" placeholder="Enter card ID" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Card's Price</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" asp-for="PriceOfCard" class="form-control" placeholder="Enter price of card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <span style="font-weight:bolder">Points</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="number" asp-for="Points" class="form-control" placeholder="Enter Loaded Money to the Card" style=" background-color: rgba(255,255,255, 0.4) !important;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 offset-md-4">
+                                                    <a class="btn btn-primary mr-1 mb-1" asp-controller="Admin" asp-action="Index">Back to Home page</a>
+
+                                                    <button type="submit" class="btn btn-primary mr-1 mb-1">Add</button>
+                                                    @*<button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>*@
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+</div>
